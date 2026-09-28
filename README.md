@@ -1,39 +1,135 @@
 # web-development-project
-Tick by Tick: Learn to Trade Futures  I built this small website to explain how futures trading works in plain language. It starts with a profit and loss calculator so I can practice the math of ticks
-Live site: https://YOUR-USERNAME.github.io/YOUR-REPO/
+   Futures Trading 101
+A beginner-friendly educational website explaining the fundamentals of futures trading, including how futures contracts work, the benefits and risks, and how new traders can get started safely.
 
-What's on the site
-A profit and loss calculator for ES, MES, NQ, MNQ, CL, and GC contracts, with long and short positions
-A six-step learning path that I follow as a beginner
-A glossary of key terms: tick, margin, leverage, expiration, long and short, and stop orders
-A risk section with an education-only disclaimer
-How it's built
+This project was created for my Web Development course to demonstrate clear navigation, intuitive layout, SEO techniques, HTML containers, forms, and user-engagement strategies.
 
-I wrote it as a single index.html file with inline CSS and JavaScript. It has no build step, no dependencies, and no external requests. It supports light and dark mode, works on phones, and can be used with a keyboard.
+Live Website
+GitHub Pages URL:
+(Paste your published GitHub Pages link here once it appears in Settings → Pages)
 
-Run it locally
+Repository
+GitHub Repository:
+(Paste your repo link here)
 
-Open index.html in a browser.
+Project Purpose
+This website introduces new learners to futures trading in a simple, structured, and accessible way.
+It includes:
 
-Publish it with GitHub Pages
-Push index.html to the root of the main branch.
-In the repository, go to Settings > Pages.
-Under Build and deployment, choose Deploy from a branch, select main and / (root), and save.
-Wait a minute or two, then open the link shown on that page.
-Contract specs
+Clear navigation
 
-The calculator uses these dollar values per point and tick sizes. I recommend confirming them with the exchange, because specifications can change.
+Organized content sections
 
-Contract	Dollars per point	Tick size
-ES	$50	0.25
-MES	$5	0.25
-NQ	$20	0.25
-MNQ	$2	0.25
-CL	$1,000	0.01
-GC	$100	0.10
+SEO-friendly structure
 
-The calculator shows results before commissions and fees.
+A responsive layout
+
+A contact and updates form
+
+Beginner-friendly explanations
+
+Risk-management reminders
+
+The goal is to create a user-friendly site that demonstrates strong web-development fundamentals.
+
+Website Structure
+HTML
+Semantic containers (header, nav, main, section, footer)
+
+Lists (ul, ol)
+
+Form elements (input, select, textarea, checkbox)
+
+Fieldsets and legends for accessibility
+
+Alt text for images
+
+Internal navigation links
+
+CSS
+Responsive layout using flexbox
+
+Styled navigation bar
+
+Styled form elements
+
+Consistent spacing and typography
+
+Color palette for readability and engagement
+
+SEO and Marketing Techniques Used
+This project includes several engagement and SEO techniques:
+
+Meta description
+
+Meta keywords
+
+Clear page title
+
+Alt text for images
+
+Readable headings (h1, h2, h3)
+
+Call-to-action button
+
+Organized content hierarchy
+
+User-friendly navigation
+
+Contact form to encourage engagement
+
+These techniques help improve search visibility and user experience.
+
+Peer Review Checklist Alignment
+Navigation
+Clear menu
+
+Logical section flow
+
+Easy-to-find content
+
+Layout
+Consistent spacing
+
+Readable typography
+
+Organized sections
+
+Forms
+Required fields
+
+Dropdown widget
+
+Textarea widget
+
+Checkbox confirmation
+
+Fieldset and legend
+
+SEO
+Meta tags
+
+Alt text
+
+Clean headings
+
+Accessibility
+Labels for all form inputs
+
+Semantic HTML
+
+Good color contrast
+
+Engagement
+Call-to-action button
+
+Mailing list form
+
+Beginner-friendly explanations
+
+Contact
+If you have questions about this project, feel free to reach out through Canvas.
 
 Disclaimer
-
-Trading futures involves substantial risk of loss and is not suitable for every investor. Because of leverage, you can lose more than your initial deposit. I share this project for education only. It is not financial, investment, or legal advice, so talk to a licensed professional before you trade with real money.
+This website is for educational purposes only.
+It is not financial advice.
