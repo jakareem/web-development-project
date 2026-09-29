@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Tick by Tick: Learn to Trade Futures</title>
+<title>Futures: Learn to Trade</title>
 <meta name="description" content="A plain-language introduction to futures trading: contracts, margin, risk, and a profit-and-loss calculator to practice with.">
 <style>
 :root{--bg:#eef2f4;--surface:#fff;--ink:#14202b;--muted:#4a5a68;--line:#c9d3da;--gain:#17693f;--loss:#b3372f;--mark:#f2c94c;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -50,104 +50,11 @@ footer{border-top:1px solid var(--line);padding:1.5rem 0;color:var(--muted);font
 <body>
 <header>
   <div class="wrap">
-    <a class="brand" href="#top">Tick by Tick</a>
+    <a class="brand" href="#top">Futures</a>
     <nav aria-label="Main"><ul>
       <li><a href="#calculator">Calculator</a></li>
       <li><a href="#path">Learning path</a></li>
       <li><a href="#terms">Key terms</a></li>
       <li><a href="#risk">Risk</a></li>
-      <li><a href="accessibility.html">Accessibility</a></li>
-    </ul></nav>
-  </div>
-</header>
-<main id="top">
-<div class="wrap">
-  <div class="hero">
-    <h1>Futures trading, explained one tick at a time.</h1>
-    <p class="lead">Futures are contracts to buy or sell something at a set price on a future date. I built this site to explain how they work, what they cost, and how quickly money can be lost, and I start with a calculator you can use right now.</p>
-
-    <div class="calc" id="calculator" role="group" aria-labelledby="calc-h">
-      <h2 id="calc-h">Profit and loss calculator</h2>
-      <div class="grid">
-        <div><label for="c">Contract</label>
-          <select id="c">
-            <option value="ES">E-mini S&amp;P 500 (ES)</option>
-            <option value="MES">Micro E-mini S&amp;P 500 (MES)</option>
-            <option value="NQ">E-mini Nasdaq-100 (NQ)</option>
-            <option value="MNQ">Micro E-mini Nasdaq-100 (MNQ)</option>
-            <option value="CL">Crude Oil (CL)</option>
-            <option value="GC">Gold (GC)</option>
-          </select></div>
-        <div><label for="d">Direction</label>
-          <select id="d"><option value="1">Long (buy)</option><option value="-1">Short (sell)</option></select></div>
-        <div><label for="q">Contracts</label><input id="q" type="number" min="1" step="1" value="1" inputmode="numeric"></div>
-        <div><label for="e">Entry price</label><input id="e" type="number" step="any" value="5000" inputmode="decimal"></div>
-        <div><label for="x">Exit price</label><input id="x" type="number" step="any" value="5010" inputmode="decimal"></div>
-      </div>
-      <div class="result" aria-live="polite">
-        <p class="detail">Result</p>
-        <p class="pnl" id="pnl">$0.00</p>
-        <p class="detail" id="det"></p>
-      </div>
-      <p class="hint">I show results before commissions and fees. Values are typical contract specs, so confirm them with your broker or the exchange.</p>
-    </div>
-  </div>
-</div>
-
-<div class="wrap">
-  <section id="path" aria-labelledby="path-h">
-    <h2 id="path-h">The learning path I follow as a beginner</h2>
-    <ol class="path">
-      <li><strong>Learn the vocabulary.</strong> I start with contract, tick, point, expiration, margin, and settlement, listed in the key terms below.</li>
-      <li><strong>Understand leverage.</strong> I remind myself that a small deposit controls a large contract value, which magnifies gains and losses equally.</li>
-      <li><strong>Practice on a simulator.</strong> I use a broker's free paper trading until my results are consistent and I follow my own rules.</li>
-      <li><strong>Write a trading plan.</strong> I define what I trade, when I enter, where I exit, and the most I will lose in a day.</li>
-      <li><strong>Start small.</strong> If I trade live, I begin with micro contracts and size positions so a single loss is a small share of my account.</li>
-      <li><strong>Review every trade.</strong> I keep a journal of what I planned, what happened, and what I would change.</li>
-    </ol>
-  </section>
-
-  <section id="terms" aria-labelledby="terms-h">
-    <h2 id="terms-h">Key terms</h2>
-    <details><summary>Tick and tick value</summary><p>A tick is the smallest price move a contract can make. Tick value is the dollar amount of one tick. For ES, one tick is 0.25 points, worth $12.50.</p></details>
-    <details><summary>Margin</summary><p>Margin is a good-faith deposit your broker requires to hold a position. It is not a fee or a cost of the trade, and you can lose more than the margin you post.</p></details>
-    <details><summary>Leverage</summary><p>Leverage means controlling a large contract value with a small deposit. A small price move can cause a large change in your account balance.</p></details>
-    <details><summary>Expiration and rollover</summary><p>Each contract ends on a set date. Traders who want to keep a position open move ("roll") to the next contract before then.</p></details>
-    <details><summary>Long and short</summary><p>Going long means you profit if the price rises. Going short means you profit if it falls.</p></details>
-    <details><summary>Stop order</summary><p>A stop order closes a position when price reaches a level you choose, capping the loss on a trade. In fast markets the fill price can be worse than the stop.</p></details>
-  </section>
-
-  <section id="risk" aria-labelledby="risk-h">
-    <h2 id="risk-h">Understand the risk first</h2>
-    <div class="risk">
-      <p>I take this seriously: trading futures involves substantial risk of loss and is not suitable for every investor. Because of leverage, you can lose more than your initial deposit. Past performance does not indicate future results.</p>
-      <p>I share this for education only. It is not financial, investment, or legal advice, so talk to a licensed professional before you trade with real money.</p>
-    </div>
-  </section>
-</div>
-</main>
-<footer><div class="wrap">Tick by Tick is my educational project. Contract specifications can change, so I recommend verifying them with the exchange.</div></footer>
-
-<script>
-(function(){
-  var specs={ES:{v:50,t:.25},MES:{v:5,t:.25},NQ:{v:20,t:.25},MNQ:{v:2,t:.25},CL:{v:1000,t:.01},GC:{v:100,t:.1}};
-  var $=function(id){return document.getElementById(id)};
-  var ids=["c","d","q","e","x"];
-  function money(n){return (n<0?"-":"")+"$"+Math.abs(n).toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2})}
-  function calc(){
-    var s=specs[$("c").value],dir=+$("d").value,q=parseInt($("q").value,10),
-        en=parseFloat($("e").value),ex=parseFloat($("x").value),
-        out=$("pnl"),det=$("det");
-    if(!(q>0)||isNaN(en)||isNaN(ex)){out.className="pnl";out.textContent="$0.00";det.className="detail err";det.textContent="Enter a whole number of contracts and both prices.";return}
-    var pts=(ex-en)*dir,ticks=pts/s.t,pnl=pts*s.v*q;
-    out.textContent=money(pnl);
-    out.className="pnl "+(pnl>0?"gain":pnl<0?"loss":"");
-    det.className="detail";
-    det.textContent=(Math.round(ticks*100)/100)+" ticks ("+(Math.round(pts*100)/100)+" points) x "+q+" contract"+(q>1?"s":"")+" at $"+(s.v*s.t)+" per tick";
-  }
-  ids.forEach(function(i){$(i).addEventListener("input",calc);$(i).addEventListener("change",calc)});
-  calc();
-})();
-</script>
-</body>
+      <li><a
 </html>
