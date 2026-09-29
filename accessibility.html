@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Accessibility Considerations — Tick by Tick</title>
+<meta name="description" content="How Tick by Tick implements accessibility: semantic structure, color contrast, keyboard support, and screen-reader-friendly forms.">
+<style>
+:root{--bg:#eef2f4;--surface:#fff;--ink:#14202b;--muted:#4a5a68;--line:#c9d3da;--mark:#f2c94c;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1820;--surface:#172430;--ink:#e8eef2;--muted:#9fb0bd;--line:#2c3e4c}}
+:root[data-theme="dark"]{--bg:#0f1820;--surface:#172430;--ink:#e8eef2;--muted:#9fb0bd;--line:#2c3e4c}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2{font-family:"Iowan Old Style",Georgia,serif;line-height:1.15}
+h1{font-size:clamp(1.9rem,5vw,2.8rem)}
+p,li{max-width:65ch}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--mark);outline-offset:2px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.25rem}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:center;justify-content:space-between;padding-top:.9rem;padding-bottom:.9rem}
+.brand{font:700 1.2rem Georgia,serif;text-decoration:none}
+nav ul{display:flex;gap:1.25rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{text-decoration:none;padding:.4rem 0;display:inline-block}
+nav a:hover{text-decoration:underline}
+main{padding:2.5rem 0 3rem}
+section{margin-bottom:2rem}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--line)}
+th{font-weight:700}
+footer{border-top:1px solid var(--line);padding:1.5rem 0;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html">Tick by Tick</a>
+    <nav aria-label="Main"><ul>
+      <li><a href="index.html#calculator">Calculator</a></li>
+      <li><a href="index.html#path">Learning path</a></li>
+      <li><a href="index.html#terms">Key terms</a></li>
+      <li><a href="index.html#risk">Risk</a></li>
+      <li><a href="accessibility.html" aria-current="page">Accessibility</a></li>
+    </ul></nav>
+  </div>
+</header>
+<main>
+<div class="wrap">
+  <h1>Accessibility Considerations</h1>
+  <p>This page describes how I've built and plan to keep building accessibility into Tick by Tick, so the site works for people using screen readers, keyboard-only navigation, low vision, or color blindness.</p>
 
+  <section aria-labelledby="structure-h">
+    <h2 id="structure-h">Semantic structure and headings</h2>
+    <p>The site uses semantic HTML elements (header, nav, main, section, footer) instead of generic divs, so assistive technology can identify the page regions correctly. Headings follow a logical order (one h1 per page, h2 for major sections), so screen reader users can navigate by heading level instead of reading the whole page top to bottom. The navigation menu has an aria-label so it's announced clearly, and the current page link uses aria-current so users know where they are.</p>
+  </section>
+
+  <section aria-labelledby="color-h">
+    <h2 id="color-h">Color and contrast</h2>
+    <p>Text and background colors meet WCAG AA contrast requirements (at least 4.5:1 for normal text) in both light and dark mode, which the site supports automatically based on the visitor's system setting. Color is never used as the only way to convey meaning; for example, gains and losses in the calculator are shown with both a color change and a plus or minus sign in the text, so a colorblind user isn't relying on green versus red alone.</p>
+  </section>
+
+  <section aria-labelledby="keyboard-h">
+    <h2 id="keyboard-h">Keyboard access and focus</h2>
+    <p>Every interactive element (links, the calculator's dropdowns and number fields, the glossary's expandable details) is reachable and operable using only the Tab and Enter keys, with no mouse required. A visible focus outline appears on whatever element is currently selected, so keyboard users always know where they are on the page.</p>
+  </section>
+
+  <section aria-labelledby="forms-h">
+    <h2 id="forms-h">Forms and labels</h2>
+    <p>Every form control in the profit and loss calculator has a real, visible &lt;label&gt; element tied to it with a matching "for" and "id" attribute, rather than placeholder text alone, so screen readers announce what each field is for. The calculator's result area uses aria-live so a screen reader automatically reads the updated profit or loss after the visitor changes an input, without requiring them to move focus manually.</p>
+  </section>
+
+  <section aria-labelledby="images-h">
+    <h2 id="images-h">Images and non-text content</h2>
+    <p>Any image added to the site going forward will include descriptive alt text, and purely decorative images will use empty alt attributes so screen readers skip them instead of reading a meaningless filename.</p>
+  </section>
+
+  <section aria-labelledby="testing-h">
+    <h2 id="testing-h">Testing plan</h2>
+    <p>Before publishing updates, I plan to check the site with the browser's built-in accessibility inspector, a contrast checker, and by tabbing through the whole page without a mouse to confirm every control is reachable in a sensible order.</p>
+  </section>
+</div>
+</main>
+<footer><div class="wrap">Tick by Tick is my educational project. Contract specifications can change, so I recommend verifying them with the exchange.</div></footer>
+</body>
+</html>
