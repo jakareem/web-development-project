@@ -10,7 +10,7 @@ GitHub Pages URL:
 
 Repository
 GitHub Repository:
-(Paste your repo link here)
+(Paste your repo link here
 
 Project Purpose
 This website introduces new learners to futures trading in a simple, structured, and accessible way.
