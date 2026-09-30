@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact — Futures</title>
+<meta name="description" content="Send a question, correction, or suggestion about the Futures learning site.">
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html">Futures</a>
+    <nav aria-label="Main"><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="contactus.html" aria-current="page">Contact</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <section aria-labelledby="contact-h">
+    <h1 id="contact-h">Get in touch</h1>
+    <p>Spotted an error in the calculator, a typo in the glossary, or have a question about the site? Send me a message below.</p>
+
+    <form class="contact-form" id="contact-form" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-hint">
+        <p id="email-hint" class="hint">I'll only use this to reply to you.</p>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button class="btn" type="submit">Send message</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</div>
+</main>
+
+<footer><div class="wrap">Futures is my educational project. Contract specifications can change, so I recommend verifying them with the exchange.</div></footer>
+
+<script>
+(function(){
+  var form=document.getElementById("contact-form");
+  var status=document.getElementById("form-status");
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    var name=document.getElementById("name").value.trim();
+    var email=document.getElementById("email").value.trim();
+    var message=document.getElementById("message").value.trim();
+    if(!name||!email||!message){
+      status.className="form-status err";
+      status.textContent="Please fill in every field before sending.";
+      return;
+    }
+    /* This form has no backend yet. Wire it to a service such as
+       Formspree, Netlify Forms, or your own endpoint to actually
+       deliver messages; for now it just confirms locally. */
+    status.className="form-status ok";
+    status.textContent="Thanks, "+name+". This demo form doesn't send messages yet, but the layout and validation are ready to connect to a real inbox.";
+    form.reset();
+  });
+})();
+</script>
+</body>
+</html>
