@@ -6,7 +6,7 @@ This project was created for my Web Development course to demonstrate clear navi
 
 Live Website
 GitHub Pages URL:
-(Paste your published GitHub Pages link here once it appears in Settings → Pages)
+(https://jakareem.github.io/web-development-project/)
 
 Repository
 GitHub Repository:
