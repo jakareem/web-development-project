@@ -10,7 +10,7 @@ GitHub Pages URL:
 
 Repository
 GitHub Repository:
-(Paste your repo link here
+(https://github.com/jakareem/web-development-project)
 
 Project Purpose
 This website introduces new learners to futures trading in a simple, structured, and accessible way.
@@ -86,7 +86,7 @@ Clear menu
 
 Logical section flow
 
-Easy-to-find content
+Easy to find content
 
 Layout
 Consistent spacing
@@ -121,11 +121,11 @@ Semantic HTML
 Good color contrast
 
 Engagement
-Call-to-action button
+Call to action button
 
 Mailing list form
 
-Beginner-friendly explanations
+Beginner friendly explanations
 
 Contact
 If you have questions about this project, feel free to reach out through Canvas.
