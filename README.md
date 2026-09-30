@@ -30,7 +30,7 @@ Beginner friendly explanations
 
 Risk management reminders
 
-The goal is to create a user-friendly site that demonstrates strong web-development fundamentals.
+The goal is to create a user friendly site that demonstrates strong web development fundamentals.
 
 Website Structure
 HTML
