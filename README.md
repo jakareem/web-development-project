@@ -1,6 +1,6 @@
 # web-development-project
    Futures Trading 101
-A beginner-friendly educational website explaining the fundamentals of futures trading, including how futures contracts work, the benefits and risks, and how new traders can get started safely.
+A beginner friendly educational website explaining the fundamentals of futures trading, including how futures contracts work, the benefits and risks, and how new traders can get started safely.
 
 This project was created for my Web Development course to demonstrate clear navigation, intuitive layout, SEO techniques, HTML containers, forms, and user-engagement strategies.
 
@@ -20,15 +20,15 @@ Clear navigation
 
 Organized content sections
 
-SEO-friendly structure
+SEO friendly structure
 
 A responsive layout
 
 A contact and updates form
 
-Beginner-friendly explanations
+Beginner friendly explanations
 
-Risk-management reminders
+Risk management reminders
 
 The goal is to create a user-friendly site that demonstrates strong web-development fundamentals.
 
@@ -70,11 +70,11 @@ Alt text for images
 
 Readable headings (h1, h2, h3)
 
-Call-to-action button
+Call to action button
 
 Organized content hierarchy
-
-User-friendly navigation
+ 
+Use friendly navigation
 
 Contact form to encourage engagement
 
