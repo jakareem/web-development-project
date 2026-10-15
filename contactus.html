@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact page for futures trading website">
+  <meta name="keywords" content="contact, trading help, beginner questions">
   <title>Contact Us</title>
   <link rel="stylesheet" href="stylesheet.css">
 </head>
@@ -9,10 +12,12 @@
 <body>
 
 <header>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Trading_icon.png/240px-Trading_icon.png" alt="Site Logo">
   <h1>Contact Us</h1>
   <nav>
     <a href="index.html">Home</a>
     <a href="aboutus.html">About</a>
+    <a href="learn.html">Learn</a>
     <a href="accessibility.html">Accessibility</a>
     <a href="contactus.html" class="active">Contact</a>
   </nav>
@@ -22,17 +27,17 @@
 
   <section>
     <h2>Send Us a Message</h2>
-    <img src="https://i.pinimg.com/736x/68/bb/a0/68bba09e31a1ddc8c6716bfeadf55abb.jpg"
-         alt="Contact support">
-    <form onsubmit="return false;">
+    <img src="https://i.pinimg.com/736x/68/bb/a0/68bba09e31a1ddc8c6716bfeadf55abb.jpg" alt="Contact support">
+
+    <form onsubmit="alert('Form submitted'); return false;">
       <label>Name</label>
-      <input type="text">
+      <input type="text" required>
 
       <label>Email</label>
-      <input type="email">
+      <input type="email" required>
 
       <label>Your Question</label>
-      <textarea></textarea>
+      <textarea required></textarea>
 
       <button>Submit</button>
     </form>
